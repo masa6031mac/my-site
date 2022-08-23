@@ -17,9 +17,9 @@ def user_list():
     my_host = "MasahironoMacBook-Pro.local"
 
     if host == my_host:
-        return render_template('userlist.html', users=users, is_login=is_login)
+        return render_template('userlist.html', host=host,users=users, is_login=is_login)
     else:
-        return render_template('index.html', users=users, is_login=is_login)
+        return render_template('index.html', host=host,users=users, is_login=is_login)
 
 if __name__ == '__main__':
 
