@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title%} hello {{ super() }}{% endblock %}
+{% block content %}
+<h1>{{ name }}({{ age }})さんがログインしました</h1>
+<h1>{{ "%s(%s)" | format(name, age)}}</h1>
+{% endblock %}
