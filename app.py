@@ -11,7 +11,8 @@ def user_list():
     users = [
         'Taro','jiro','Saburo','Shiro'
     ]
-    return render_template('userlist.html', users=users)
+    is_login = False
+    return render_template('userlist.html', users=users, is_login=is_login)
 
 if __name__ == '__main__':
     app.run()

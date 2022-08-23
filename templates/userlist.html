@@ -12,5 +12,13 @@
         <li>{{ user }}</li>
     {% endfor %}
     </ul>
+    {% if is_login %}
+        <p>ログイン隅です</p>
+    {% else %}
+        <p>ログインしていません</p>
+    {% endif %}
+    {% if 'Taro' in users %}
+        <p>Taroは存在します</p>
+    {% endif %}
 </body>
 </html>
