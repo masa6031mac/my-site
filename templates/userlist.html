@@ -12,22 +12,13 @@
 {% extends "base.html" %}
 {% block title%}index.html{% endblock %}
 {% block content %}
-    <h1>hostname: {{ host }}</h1>
+<a href="{{ url_for('index') }}">Index Page</a>
     <ul>
-    <h1>最後の人は{{ users|last }}</h1>
-    <h2>{{users | sort | first }}</h2>
+
 
 
     {% for user in users %}
-        <li>{{ user }}</li>
+        <li>{{ user.name }} {{user.age}} boarn at {{ user.age | born_year}}</li>
     {% endfor %}
     </ul>
-    {% if is_login %}
-        <p>ログイン隅です</p>
-    {% else %}
-        <p>ログインしていません</p>
-    {% endif %}
-    {% if 'Taro' in users %}
-        <p>Taroは存在します</p>
-    {% endif %}
 {% endblock %}
